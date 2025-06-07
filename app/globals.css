@@ -3,11 +3,31 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #00CAFF; /* Jasny niebieski */
+  --primary-light: #33D6FF; /* Jaśniejszy niebieski */
+  --primary-dark: #0099CC; /* Ciemniejszy niebieski */
+  --secondary: #2D3748; /* Ciemny szary z odcieniem niebieskiego */
+  --secondary-light: #4A5568; /* Jaśniejszy szary */
+  --secondary-dark: #1A202C; /* Ciemniejszy szary */
+  --accent: #7928CA; /* Fioletowy akcent */
+  --accent-light: #9F7AEA; /* Jaśniejszy fiolet */
+  --accent-dark: #553C9A; /* Ciemniejszy fiolet */
+  --success: #10B981; /* Zielony */
+  --warning: #FBBF24; /* Żółty */
+  --danger: #EF4444; /* Czerwony */
+  --gray-light: #f3f4f6;
+  --gray-medium: #9ca3af;
+  --gray-dark: #4b5563;
+  --foreground-rgb: 23, 23, 23;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,11 +36,128 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Selektywne style dla tekstu na białym tle */
+.bg-white p:not([class*="text-"]), 
+.bg-white h1:not([class*="text-"]), 
+.bg-white h2:not([class*="text-"]), 
+.bg-white h3:not([class*="text-"]), 
+.bg-white h4:not([class*="text-"]), 
+.bg-white h5:not([class*="text-"]), 
+.bg-white h6:not([class*="text-"]), 
+.bg-white span:not([class*="text-"]), 
+.bg-white div:not([class*="text-"]) {
+  color: #171717;
+}
+
+/* Style dla sekcji z białym tłem bez klasy bg-white */
+section:not([class*="bg-"]) p:not([class*="text-"]), 
+section:not([class*="bg-"]) h1:not([class*="text-"]), 
+section:not([class*="bg-"]) h2:not([class*="text-"]), 
+section:not([class*="bg-"]) h3:not([class*="text-"]), 
+section:not([class*="bg-"]) h4:not([class*="text-"]), 
+section:not([class*="bg-"]) h5:not([class*="text-"]), 
+section:not([class*="bg-"]) h6:not([class*="text-"]), 
+section:not([class*="bg-"]) span:not([class*="text-"]), 
+section:not([class*="bg-"]) div:not([class*="text-"]) {
+  color: #171717;
+}
+
+/* Style dla elementów bez określonego koloru tekstu */
+p:not([class*="text-"]), 
+h1:not([class*="text-"]), 
+h2:not([class*="text-"]), 
+h3:not([class*="text-"]), 
+h4:not([class*="text-"]), 
+h5:not([class*="text-"]), 
+h6:not([class*="text-"]) {
+  color: #171717;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern button styles */
+.btn {
+  @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center justify-center;
+}
+
+.btn-primary {
+  @apply bg-[#00CAFF] hover:bg-[#0099CC] text-white shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-[#00CAFF] text-[#00CAFF] hover:bg-[#00CAFF]/10;
+}
+
+/* Section styling */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.7s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-[#00CAFF] text-white hover:bg-[#0099CC];
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-[#00CAFF] border border-[#00CAFF] hover:bg-[#E6F9FF];
+  }
+
+  .slide-up {
+    animation: slide-up 0.7s ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
