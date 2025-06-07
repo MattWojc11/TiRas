@@ -1,12 +1,11 @@
 type ProjectCardProps = {
-  id: number;
   title: string;
   category: string;
   image: string;
   description: string;
 };
 
-export default function ProjectCard({ id, title, category, image, description }: ProjectCardProps) {
+export default function ProjectCard({ title, category, image, description }: ProjectCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md">
       <div className="relative h-64">

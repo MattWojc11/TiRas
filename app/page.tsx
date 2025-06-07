@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from 'next/link';
 import TestimonialsSection from "./components/home/TestimonialsSection";
 import FAQSection from "./components/home/FAQSection";
 import StatsSection from "./components/home/StatsSection";
 import CTASection from "./components/home/CTASection";
-import GallerySection from "./components/home/GallerySection";
 import ProjectsGallery from "./components/home/ProjectsGallery";
 import HeroCarousel from "./components/home/HeroCarousel";
 
