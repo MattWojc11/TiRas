@@ -1,4 +1,5 @@
 import AllProjectsGallery from "../components/projects/AllProjectsGallery";
+import { Suspense } from "react";
 
 export const metadata = {
   title: 'Realizacje | TiRas - Konstrukcje Drewniane',
@@ -23,7 +24,9 @@ export default function RealizacjePage() {
       </section>
 
       {/* Projects Gallery */}
-      <AllProjectsGallery />
+      <Suspense fallback={<div className="py-16 text-center">Ładowanie projektów...</div>}>
+        <AllProjectsGallery />
+      </Suspense>
 
       {/* Call to action */}
       <section className="py-16 bg-[#E6F9FF]">
