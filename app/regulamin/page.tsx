@@ -12,12 +12,13 @@ export default function RegulaminPage() {
       <PageHeader 
         title="Regulamin" 
         description="Zasady korzystania z usług firmy TiRas"
+        className="bg-gradient-to-r from-[#1A202C] to-[#2D3748]"
       />
 
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto prose prose-lg">
-            <h2>§1. Postanowienia ogólne</h2>
+          <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md prose prose-lg prose-p:text-black prose-li:text-black prose-ul:text-black">
+            <h2 className="text-[#00CAFF] border-b border-gray-200 pb-2">§1. Postanowienia ogólne</h2>
             <p>
               1.1. Niniejszy regulamin określa zasady korzystania z usług oferowanych przez firmę TiRas, 
               specjalizującą się w projektowaniu i wykonawstwie konstrukcji drewnianych, w tym pergoli, 
@@ -31,7 +32,7 @@ export default function RegulaminPage() {
               opublikowania na stronie internetowej.
             </p>
 
-            <h2>§2. Zamówienia i realizacja</h2>
+            <h2 className="text-[#00CAFF] border-b border-gray-200 pb-2">§2. Zamówienia i realizacja</h2>
             <p>
               2.1. Zamówienia można składać poprzez formularz kontaktowy na stronie internetowej, telefonicznie 
               lub drogą mailową.
@@ -50,7 +51,7 @@ export default function RegulaminPage() {
               prowadzenie prac, opóźnienia w dostawie materiałów, itp.
             </p>
 
-            <h2>§3. Płatności</h2>
+            <h2 className="text-[#00CAFF] border-b border-gray-200 pb-2">§3. Płatności</h2>
             <p>
               3.1. Ceny usług są ustalane indywidualnie na podstawie zakresu prac i wybranych materiałów.
             </p>
@@ -60,13 +61,13 @@ export default function RegulaminPage() {
             <p>
               3.3. Standardowy harmonogram płatności:
             </p>
-            <ul>
-              <li>Zaliczka: 30% wartości zamówienia przy podpisaniu umowy</li>
-              <li>Płatność częściowa: 40% po dostawie materiałów i rozpoczęciu prac</li>
-              <li>Płatność końcowa: 30% po zakończeniu realizacji i odbiorze prac</li>
+            <ul className="text-black font-medium">
+              <li className="text-black">Zaliczka: 30% wartości zamówienia przy podpisaniu umowy</li>
+              <li className="text-black">Płatność częściowa: 40% po dostawie materiałów i rozpoczęciu prac</li>
+              <li className="text-black">Płatność końcowa: 30% po zakończeniu realizacji i odbiorze prac</li>
             </ul>
 
-            <h2>§4. Gwarancja</h2>
+            <h2 className="text-[#00CAFF] border-b border-gray-200 pb-2">§4. Gwarancja</h2>
             <p>
               4.1. Firma TiRas udziela gwarancji na wykonane konstrukcje drewniane na okres 24 miesięcy 
               od daty odbioru prac.
@@ -77,18 +78,18 @@ export default function RegulaminPage() {
             <p>
               4.3. Gwarancja nie obejmuje:
             </p>
-            <ul>
-              <li>Naturalnych zmian w drewnie wynikających z warunków atmosferycznych</li>
-              <li>Uszkodzeń mechanicznych powstałych z winy użytkownika</li>
-              <li>Uszkodzeń wynikających z nieprawidłowej konserwacji</li>
-              <li>Uszkodzeń powstałych w wyniku klęsk żywiołowych</li>
+            <ul className="text-black font-medium">
+              <li className="text-black">Naturalnych zmian w drewnie wynikających z warunków atmosferycznych</li>
+              <li className="text-black">Uszkodzeń mechanicznych powstałych z winy użytkownika</li>
+              <li className="text-black">Uszkodzeń wynikających z nieprawidłowej konserwacji</li>
+              <li className="text-black">Uszkodzeń powstałych w wyniku klęsk żywiołowych</li>
             </ul>
             <p>
               4.4. Warunkiem zachowania gwarancji jest przestrzeganie zaleceń dotyczących konserwacji 
               i użytkowania konstrukcji drewnianych.
             </p>
 
-            <h2>§5. Reklamacje</h2>
+            <h2 className="text-[#00CAFF] border-b border-gray-200 pb-2">§5. Reklamacje</h2>
             <p>
               5.1. Reklamacje należy zgłaszać pisemnie na adres email: kontakt@tiras.pl lub listownie 
               na adres siedziby firmy.
@@ -104,7 +105,7 @@ export default function RegulaminPage() {
               w terminie ustalonym z klientem.
             </p>
 
-            <h2>§6. Postanowienia końcowe</h2>
+            <h2 className="text-[#00CAFF] border-b border-gray-200 pb-2">§6. Postanowienia końcowe</h2>
             <p>
               6.1. W sprawach nieuregulowanych niniejszym regulaminem zastosowanie mają przepisy Kodeksu Cywilnego.
             </p>
